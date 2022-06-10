@@ -1,0 +1,270 @@
+@import './map.styl';
+@import './theme-container';
+@import './mobile.styl';
+@import './csshake';
+@import './tag';
+@import './theme-dark';
+@import './mdit';
+
+/* * all * */
+body {
+    scroll-behavior: smooth;
+}
+
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, textarea, p, blockquote, th, td {
+    margin: 0;
+    padding: 0;
+}
+
+button, audio {
+    outline: none;
+}
+
+fieldset, img {
+    border: 0;
+}
+
+li {
+    list-style: none;
+}
+
+input[type=radio] {
+    cursor: pointer;
+}
+
+input[type=checkbox] {
+    cursor: pointer;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+a, a:active, a:hover, a:visited, a:link {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+body, html {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', 'Helvetica Neue', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    color: #222;
+}
+
+h2 {
+    border: none;
+}
+
+/* 滚动条样式 */
+div::-webkit-scrollbar, ul::-webkit-scrollbar, pre::-webkit-scrollbar, body::-webkit-scrollbar, html::-webkit-scrollbar, aside::-webkit-scrollbar, main::-webkit-scrollbar {
+    width: 12px !important;
+    height: 12px !important;
+    padding: 0 4px !important;
+}
+
+div::-webkit-scrollbar-thumb, ul::-webkit-scrollbar-thumb, pre::-webkit-scrollbar-thumb, body::-webkit-scrollbar-thumb, html::-webkit-scrollbar-thumb, aside::-webkit-scrollbar-thumb, main::-webkit-scrollbar-thumb {
+    /* 滚动条里面小方块 */
+    background-color: rgb(215, 215, 215) !important;
+    border: 3px solid transparent !important;
+    border-radius: 6px !important;
+    background-clip: content-box !important;
+}
+
+div::-webkit-scrollbar-track, ul::-webkit-scrollbar-track, pre::-webkit-scrollbar-track, body::-webkit-scrollbar-track, html::-webkit-scrollbar-track, aside::-webkit-scrollbar-track, main::-webkit-scrollbar-track {
+    /* 滚动条里面轨道 */
+    background: #fafafa !important;
+    border-radius: 0 4px 4px 0;
+}
+
+#app, .theme-container, .page {
+    min-height: 100vh;
+    height: auto;
+}
+
+.page {
+    padding-bottom: 0 !important;
+}
+
+.theme-default-content {
+    position: relative;
+    min-height: calc(100% - 120px);
+}
+
+.logo {
+    position: relative;
+    height: 1.4rem !important;
+    min-width: 0rem !important;
+    top: 5px;
+}
+
+header.navbar .links {
+    background: transparent;
+}
+
+.theme-container {
+    .suggestions {
+        border-radius: 5px;
+        border: 1px solid #e4e7ed;
+        box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
+        margin-top: 15px;
+    }
+}
+
+.content__default {
+    max-width: 100% !important;
+    margin: 0 0 !important;
+    // padding: 0 !important;
+    overflow-x: hidden;
+
+    h2 {
+        margin-bottom: 0 !important;
+        font-size: 1.8rem;
+        border-bottom: 0;
+    }
+
+    h3 {
+        margin: 55px 0 10px !important;
+        padding: 0 0 10px 0 !important;
+        font-weight: 400;
+    }
+
+    h6 {
+        margin: 10px 0 20px !important;
+        padding: 0 !important;
+        font-size: 14px;
+        color: #5e6d82;
+        line-height: 1.5em;
+        font-weight: 400;
+    }
+
+    >p {
+        max-width: 840px;
+
+        img {
+            margin: 10px 0;
+            border-radius: 5px;
+        }
+    }
+}
+
+.page-edit {
+    max-width: 100% !important;
+}
+
+.page-nav {
+    padding-bottom: 30px !important;
+
+    .inner {
+        // border-top: 0 !important;
+    }
+}
+
+.el-checkbox {
+    display: block;
+    margin: 15px 0;
+
+    &.is-checked {
+        .el-checkbox__inner {
+            background-color: #FAB905;
+            border-color: #FAB905;
+        }
+
+        .el-checkbox__label {
+            color: #606266 !important;
+        }
+    }
+}
+
+.aplayer-info {
+    padding-bottom: 8px !important;
+}
+
+/* shn */
+/* ==for FF/chrome/opera/IE8== */
+.clearfloat:after {
+    clear: both;
+    content: '.';
+    display: block;
+    width: 0;
+    height: 0;
+    visibility: hidden;
+}
+
+.ellipsis {
+    display: inline-block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    vertical-align: bottom;
+}
+
+.annotation {
+    font-size: 13px;
+    color: #888;
+}
+
+.cursor-pointer {
+    cursor: pointer;
+}
+
+.no-padding {
+    padding: 0 !important;
+}
+
+.flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.filter-col {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+/* * index * */
+.home {
+    max-width: 1000px !important;
+
+    .hero {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+
+        img {
+            max-height: 500px !important;
+        }
+
+        h1 {
+            font-size: 2rem !important;
+            margin: 1.4rem auto !important;
+        }
+
+        .description {
+            margin: 1.4rem auto !important;
+        }
+    }
+}
+
+/* * photo-list * */
+.photo-list {
+    .el-image {
+        >img {
+            border-radius: 3px;
+            transition: all 0.3s ease;
+            transform-origin: center center;
+            backface-visibility: hidden;
+
+            &:hover {
+                transform: scale(1.05);
+            }
+        }
+    }
+}
