@@ -2,17 +2,14 @@
   <div class="index-wrap">
     <div
       :style="{
-        'background-image': `url(https://cdn.chenyingshuang.cn/index/bg${bannerBg}.jpg)`,
+        'background-image': `url(https://s2.loli.net/2022/06/13/${bannerBg}.jpg)`,
       }"
       class="banner-wrap"
     >
-      <!-- :style="{'background-image':`url(https://cdn1.zzzmh.cn/img/3a1a0cde1d0a.jpg!fullwp)`}" -->
-      <!-- :style="{'background-image':`url(https://cdn.chenyingshuang.cn/index/bg${bannerBg}.jpg)`}" -->
-      <img alt src="../public/img/index-logo.gif" />
-
+      <img alt class="touxiang" src="../public/img/dog.png" />
       <div>
-        <h1>说说我的生活</h1>
-        <p>Don't cry, do laugh</p>
+        <h1>记录生活 记录美</h1>
+        <p>never give up, invincible</p>
       </div>
     </div>
     <main>
@@ -264,7 +261,8 @@ export default {
       .querySelectorAll("header.navbar")[0]
       .setAttribute("class", "navbar index-header-transparent");
 
-    this.bannerBg = Math.floor(Math.random() * 4 + 1);
+    const bgList = ['2Ix4BH1apFwhXqk', 'AuHQyJYdVvzNSqT', 'CNRGFQvOasBDf7Z', 'yzuG2J1TCv3XfS6', 'rMNdqIjAXGEsopY'];
+    this.bannerBg = bgList[Math.floor(Math.random() * 5)];
     this.loveTime();
     this.getInfo();
   },
@@ -445,6 +443,8 @@ export default {
       width: 7rem;
       margin-right: 40px;
       border-radius: 50%;
+      padding: 10px;
+      background: #fff;
     }
   }
 
