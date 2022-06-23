@@ -18,7 +18,7 @@
               >https://www.sanghangning.cn</a
             >
           </p>
-          <p>描述： 说说我的生活</p>
+          <p>描述： 记录生活 记录美</p>
           <p>头像： https://cdn.chenyingshuang.cn/index/avatar.jpg</p>
         </div>
       </div>

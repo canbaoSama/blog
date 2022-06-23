@@ -1,4 +1,4 @@
-### This is my life 🥳
+### 个人博客 🥳
 
 See more content from [my blog](https://www.sanghangning.cn)
 
@@ -6,6 +6,9 @@ See more content from [my blog](https://www.sanghangning.cn)
 
 <!-- #
 ### - 新增blog
+
+### 支持 node 12版本，再高不支持
+
 启动本地express服务器,开启本地修改blog.json文件接口
 ```
 node express/index.js
