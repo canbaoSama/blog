@@ -57,7 +57,7 @@
 				<div class="card-wrap card-info">
 					<div class="avatar-info">
 						<el-avatar :size="80">
-							<img src="https://cdn.chenyingshuang.cn/index/avatar.jpg" />
+							<img src="https://s2.loli.net/2022/06/23/RmpxzgfeTXL9K7k.jpg" />
 						</el-avatar>
 						<p>有机猴灬残暴Sama</p>
 					</div>
@@ -93,15 +93,8 @@
 
 				<div class="card-wrap card-love">
 					<div class="avatar-info">
-						<img
-							alt
-							src="https://cdn.chenyingshuang.cn/life/diary/2020-05-20-1.jpg"
-						/>
+						<img src="https://s2.loli.net/2022/06/23/M1P7YozxsNnklfD.jpg"></img>
 						<i class="shni shn-heart-fill"></i>
-						<img
-							alt
-							src="https://cdn.chenyingshuang.cn/life/diary/2020-05-20-2.jpg"
-						/>
 					</div>
 					<p>
 						{{ loveInfo.daysNum }} 天 {{ loveInfo.hoursNum }} 时
@@ -191,7 +184,7 @@ export default {
 			bannerBg: 1,
 
 			loveInfo: {
-				deadline: "2019/06/29",
+				deadline: "2022/06/18",
 				daysNum: "∞",
 				hoursNum: "∞",
 				minutesNum: "∞",
@@ -201,18 +194,18 @@ export default {
 				{
 					title: "日记",
 					content: "做一个热爱生活的人，把生活记录下来。",
-					bg: "https://cdn.chenyingshuang.cn/index/carousel1.jpg",
+					bg: "https://s2.loli.net/2022/06/23/XNFL8Q4Ah1nuUgx.jpg",
 				},
 				{
 					title: "旅行",
 					content:
 						"我认为旅行是从大自然学习的最佳方式。走遍世界，这是我最大的梦想。",
-					bg: "https://cdn.chenyingshuang.cn/index/carousel2.jpg",
+					bg: "https://s2.loli.net/2022/06/23/4mOBjYVoGzcJkUN.jpg",
 				},
 				{
 					title: "好好打代码",
 					content: "每天都要学习！",
-					bg: "https://cdn.chenyingshuang.cn/index/carousel3.jpg",
+					bg: "https://s2.loli.net/2022/06/23/DdJVaUg36snwi9I.jpg",
 				},
 			],
 		};
@@ -597,17 +590,17 @@ export default {
 					display: flex;
 					justify-content: center;
 					align-items: center;
+					position: relative;
+					flex-wrap: wrap;
 
 					img {
-						width: 50px;
-						height: 50px;
-						border-radius: 50%;
-						border: #fff 2px solid;
-						box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.1);
-						margin: 0 20px;
+						width: 100%;
+						display: block;
 					}
 
 					i {
+						display: block;
+						margin-top: 10px;
 						color: #f56c6c;
 						animation: xintiao 1.33s ease-in-out infinite;
 					}
@@ -628,10 +621,6 @@ export default {
 							transform: scale(1);
 						}
 					}
-				}
-
-				p {
-					margin-top: 10px;
 				}
 			}
 
