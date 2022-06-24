@@ -1,53 +1,37 @@
 <template>
 	<div class="index-wrap">
-		<div
-			:style="{
-				'background-image': `url(https://s2.loli.net/2022/06/13/${bannerBg}.jpg)`,
-			}"
-			class="banner-wrap"
-		>
+		<div :style="{
+			'background-image': `url(https://s2.loli.net/2022/06/13/${bannerBg}.jpg)`,
+		}" class="banner-wrap">
 			<img alt class="touxiang" src="../public/img/dog.png" />
 			<div>
 				<h1>记录生活 记录美</h1>
-				<p>never give up, invincible</p>
+				<p>时间长河 川流不息 | 驻足回首 亦忆往昔 | 望白头 观沧海 叹尽年少风云</p>
 			</div>
 		</div>
 		<main>
 			<main v-loading="loading">
 				<div>
-					<div
-						:key="item.title + item.date + index"
-						class="card-wrap"
-						v-for="(item, index) in showList"
-					>
-						<router-link :to="item.url" class="article-title">{{
-							item.title
-						}}</router-link>
-
-						<p class="article-date">
-							{{ mixin_getDate(item.date, "MC dd,yyyy") }}
-						</p>
+					<div :key="item.title + item.date + index" class="card-wrap" v-for="(item, index) in showList">
+						<router-link :to="item.url" class="article-title">{{item.title}}</router-link>
 
 						<p class="article-summary" v-if="item.summary">
 							{{ item.summary }}
 						</p>
 
-						<p>
-							<base-tag
-								:data="{
+						<div class="article-tag-date">
+							<div class="base-tags">
+								<base-tag :data="{
 									name: '置顶',
 									type: 'top',
 									icon: 'shni shn-pushpin-fill',
-								}"
-								style="margin-right: 2px"
-								v-if="item.top"
-							/>
-							<base-tag
-								:data="_item"
-								:key="'archives-tag-' + item.title + _index + _item.name"
-								v-for="(_item, _index) in item.tag"
-							/>
-						</p>
+								}" style="margin-right: 2px" v-if="item.top" />
+								<base-tag :data="_item" :key="'archives-tag-' + item.title + _index + _item.name"
+									v-for="(_item, _index) in item.tag" />
+							</div>
+
+							<div class="article-date">{{ mixin_getDate(item.date, "yyyy-MM-dd") }}</div>
+						</div>
 					</div>
 				</div>
 
@@ -62,10 +46,7 @@
 						<p>有机猴灬残暴Sama</p>
 					</div>
 					<div class="data-info">
-						<div
-							@click="$router.push('/blog/Archives.html')"
-							class="data-info-item"
-						>
+						<div @click="$router.push('/blog/Archives.html')" class="data-info-item">
 							<p class="data-info-item-title">文章</p>
 							<p class="data-info-item-data">{{ blogInfo.blog.length }}</p>
 						</div>
@@ -103,21 +84,13 @@
 				</div>
 
 				<div class="card-wrap card-carousel">
-					<el-carousel
-						:interval="10000"
-						arrow="always"
-						direction="vertical"
-						trigger="click"
-					>
+					<el-carousel :interval="10000" arrow="always" direction="vertical" trigger="click">
 						<el-carousel-item :key="item.title" v-for="item in carouselInfo">
-							<div
-								:style="{
-									'background-image': `url(${item.bg})`,
-									'background-position': 'center center',
-									'background-size': 'cover',
-								}"
-								class="card-carousel-item"
-							>
+							<div :style="{
+								'background-image': `url(${item.bg})`,
+								'background-position': 'center center',
+								'background-size': 'cover',
+							}" class="card-carousel-item">
 								<div>
 									<h2>{{ item.title }}</h2>
 									<p>{{ item.content }}</p>
@@ -128,39 +101,26 @@
 				</div>
 
 				<div class="card-wrap card-tag">
-					<base-tag
-						:data="item"
-						:key="'tag-' + index + item.name"
-						@click="tagClick(item.name)"
+					<base-tag :data="item" :key="'tag-' + index + item.name" @click="tagClick(item.name)"
 						style="margin-right: 10px; margin-top: 10px; cursor: pointer"
-						v-for="(item, index) in blogInfo.tag"
-					/>
+						v-for="(item, index) in blogInfo.tag" />
 				</div>
 			</aside>
 		</main>
 
 		<footer>
-			<div
-				:style="{
-					'background-image': `url(https://cdn.chenyingshuang.cn/index/bg${bannerBg}.jpg)`,
-				}"
-				class="bg"
-			></div>
+			<div :style="{
+				'background-image': `url(https://cdn.chenyingshuang.cn/index/bg${bannerBg}.jpg)`,
+			}" class="bg"></div>
 			<div class="footer-wrap">
 				<div class="copyright">©2019 - 2020 By Shn</div>
 				<div class="framework-info">
 					<span>Power by</span>
-					<a
-						href="https://vuepress.vuejs.org/zh/"
-						rel="noopener"
-						target="_blank"
-					>
+					<a href="https://vuepress.vuejs.org/zh/" rel="noopener" target="_blank">
 						<span>Vuepress</span>
 					</a>
 					&
-					<a href="http://beian.miit.gov.cn/" style="font-size: 14px"
-						>浙ICP备18029315号-2</a
-					>
+					<a href="http://beian.miit.gov.cn/" style="font-size: 14px">浙ICP备18029315号-2</a>
 				</div>
 			</div>
 		</footer>
@@ -422,21 +382,24 @@ export default {
 		background-position: center;
 		background-size: cover;
 		display: flex;
+		flex-wrap: wrap;
 		justify-content: center;
 		align-items: center;
+		padding: 175px 0;
 
-		> div {
+		>div {
 			color: #fff;
 			text-align: center;
 			letter-spacing: 5px;
 			text-indent: 5px;
+			width: 100%;
 
 			h1 {
 				font-size: 2rem;
 			}
 
 			p {
-				margin-top: 30px;
+				margin-top: 8px;
 				font-size: 1.2rem;
 			}
 		}
@@ -450,7 +413,7 @@ export default {
 		}
 	}
 
-	> main {
+	>main {
 		width: 1200px;
 		margin: 0 auto;
 		padding: 30px 24px;
@@ -471,11 +434,8 @@ export default {
 					font-size: 18px;
 					color: rgba(0, 0, 0, 0.87);
 					line-height: 1.5;
-				}
-
-				.article-date {
-					font-size: 14px;
-					color: rgba(0, 0, 0, 0.6);
+					display: block;
+					margin-bottom: 4px;
 				}
 
 				.article-summary {
@@ -484,6 +444,16 @@ export default {
 					font-size: 14px;
 					line-height: 1.375rem;
 					font-weight: 400;
+				}
+
+				.article-tag-date {
+					display: flex;
+					align-items: center;
+					justify-content: space-between;
+
+					.article-date {
+						font-size: 14px;
+					}
 				}
 			}
 
@@ -633,7 +603,7 @@ export default {
 					width: 100%;
 					height: 100%;
 
-					> div {
+					>div {
 						position: absolute;
 						bottom: 0;
 						padding: 2rem 1.4rem;
@@ -691,22 +661,22 @@ export default {
 			}
 		}
 
-		> main {
+		>main {
 			display: inline-flex;
 			flex-direction: column;
 			width: 100%;
 			padding-top: 0;
 
-			> main {
+			>main {
 				order: 1;
 			}
 
-			> aside {
+			>aside {
 				order: -1;
 			}
 
-			> main,
-			> aside {
+			>main,
+			>aside {
 				display: block;
 				width: 100%;
 				margin-left: 0;

@@ -4,35 +4,36 @@
 
 <script>
 export default {
-  name: 'Valine',
+  name: "Valine",
   data() {
     return {
-      uuid: new Date().getTime() + Math.round(Math.random() * 10000)
-    }
+      uuid: new Date().getTime() + Math.round(Math.random() * 10000),
+    };
   },
-  mounted: function() {
+  mounted: function () {
     // require window
-    const Valine = require('valine')
-    if (typeof window !== 'undefined') {
-      this.window = window
-      window.AV = require('leancloud-storage')
+    const Valine = require("valine");
+    if (typeof window !== "undefined") {
+      this.window = window;
+      window.AV = require("leancloud-storage");
     }
 
     new Valine({
       el: `#valine-wrap-${this.uuid}`,
-      appId: '2MgoJb7PsBdDJavPcPPU3oO2-gzGzoHsz', // your appId
-      appKey: 'mF1z8VJ3jMiohj3Q2S4b7yB6', // your appKey
+      appId: "rl9uH6xgSWAMIyWlRT9GnO6L-gzGzoHsz", // your appId
+      appKey: "w0vBAGeaB8EJL3AOV94DrSSm", // your appKey
       notify: false,
       verify: false,
-      avatar: 'robohash',
-      placeholder: '',
+      avatar: "monsterid",
+      placeholder: "",
       visitor: true,
       recordIP: true,
-      meta: ['nick', 'mail'],
-      path: window.location.pathname
-    })
-  }
-}
+      meta: ["nick", "mail"],
+      path: window.location.pathname,
+      placeholder: "欢迎留言与我分享您的想法...",
+    });
+  },
+};
 </script>
 <style lang="scss">
 .valine-module {
