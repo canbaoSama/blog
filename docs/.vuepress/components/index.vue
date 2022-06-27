@@ -120,7 +120,7 @@
 						<span>Vuepress</span>
 					</a>
 					&
-					<a href="http://beian.miit.gov.cn/" style="font-size: 14px">浙ICP备18029315号-2</a>
+					<a href="http://beian.miit.gov.cn/" style="font-size: 14px">还没有备案</a>
 				</div>
 			</div>
 		</footer>
