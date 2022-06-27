@@ -1,6 +1,6 @@
 ### 个人博客 🥳
 
-See more content from [my blog](https://www.sanghangning.cn)
+See more content from [my blog](https://www.canbaoSama.site)
 
 [![ShnHz's github stats](https://github-readme-stats.vercel.app/api?username=ShnHz&show_icons=true&include_all_commits=true)](https://github.com/ShnHz)
 

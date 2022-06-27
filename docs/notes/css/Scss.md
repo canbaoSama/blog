@@ -2,9 +2,9 @@
 ### 常用参数
 ``` scss
 /*
- * @Author: sanghangning 
+ * @Author: canbaoSama 
  * @Date: 2019-12-11 10:48:23 
- * @Last Modified by: sanghangning
+ * @Last Modified by: canbaoSama
  * @Last Modified time: 2020-03-27 11:11:37
  */
  $--color-white:#fff;
