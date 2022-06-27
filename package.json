@@ -11,15 +11,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ShnHz/say-my-life.git"
+    "url": "https://github.com/canbaoSama/blog"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/ShnHz/say-my-life/issues"
+    "url": "https://github.com/canbaoSama/blog/issues"
   },
-  "homepage": "https://github.com/ShnHz/say-my-life#readme",
+  "homepage": "https://github.com/canbaoSama/blog",
   "dependencies": {
     "autoprefixer": "^9.6.4",
     "axios": "^0.27.2",
