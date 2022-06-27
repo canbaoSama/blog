@@ -27,20 +27,20 @@
     </Page>
 
     <div class="record-wrap" v-if="pageVisible">
-      <a href="http://beian.miit.gov.cn/">浙ICP备18029315号-2</a>
+      <a href="http://beian.miit.gov.cn/">备案号还在审核</a>
     </div>
   </div>
 </template>
 
 <script>
-import Home from '@theme/components/Home.vue'
-import Navbar from '@theme/components/Navbar.vue'
-import Page from '@theme/components/Page.vue'
-import Sidebar from '@theme/components/Sidebar.vue'
-import { resolveSidebarItems } from '../util'
-import LoadingPage from '../components/LoadingPage.vue'
-import Lock from '../components/Lock.vue'
-import HidePassword from '../components/HidePassword.vue'
+import Home from "@theme/components/Home.vue";
+import Navbar from "@theme/components/Navbar.vue";
+import Page from "@theme/components/Page.vue";
+import Sidebar from "@theme/components/Sidebar.vue";
+import { resolveSidebarItems } from "../util";
+import LoadingPage from "../components/LoadingPage.vue";
+import Lock from "../components/Lock.vue";
+import HidePassword from "../components/HidePassword.vue";
 
 export default {
   components: { Home, Page, Sidebar, Navbar, LoadingPage, Lock, HidePassword },
@@ -50,16 +50,16 @@ export default {
       isSidebarOpen: false,
       loading: true,
 
-      pageVisible: true
-    }
+      pageVisible: true,
+    };
   },
 
   computed: {
     shouldShowNavbar() {
-      const { themeConfig } = this.$site
-      const { frontmatter } = this.$page
+      const { themeConfig } = this.$site;
+      const { frontmatter } = this.$page;
       if (frontmatter.navbar === false || themeConfig.navbar === false) {
-        return false
+        return false;
       }
       return (
         this.$title ||
@@ -67,16 +67,16 @@ export default {
         themeConfig.repo ||
         themeConfig.nav ||
         this.$themeLocaleConfig.nav
-      )
+      );
     },
 
     shouldShowSidebar() {
-      const { frontmatter } = this.$page
+      const { frontmatter } = this.$page;
       return (
         !frontmatter.home &&
         frontmatter.sidebar !== false &&
         this.sidebarItems.length
-      )
+      );
     },
 
     sidebarItems() {
@@ -85,105 +85,105 @@ export default {
         this.$page.regularPath,
         this.$site,
         this.$localePath
-      )
+      );
     },
 
     pageClasses() {
-      const userPageClass = this.$page.frontmatter.pageClass
+      const userPageClass = this.$page.frontmatter.pageClass;
       return [
         {
-          'no-navbar': !this.shouldShowNavbar,
-          'sidebar-open': this.isSidebarOpen,
-          'no-sidebar': !this.shouldShowSidebar
+          "no-navbar": !this.shouldShowNavbar,
+          "sidebar-open": this.isSidebarOpen,
+          "no-sidebar": !this.shouldShowSidebar,
         },
-        userPageClass
-      ]
-    }
+        userPageClass,
+      ];
+    },
   },
   watch: {
     $route: {
-      handler: function(to, from) {
+      handler: function (to, from) {
         if (this.$page.frontmatter.home) {
-          this.pageVisible = false
+          this.pageVisible = false;
         } else {
           if (this.haveLock()) {
-            this.pageVisible = false
+            this.pageVisible = false;
           } else {
-            this.pageVisible = true
+            this.pageVisible = true;
           }
         }
       },
-      immediate: true
-    }
+      immediate: true,
+    },
   },
   mounted() {
     this.$router.afterEach(() => {
-      this.isSidebarOpen = false
-    })
+      this.isSidebarOpen = false;
+    });
 
-    let _this = this
+    let _this = this;
 
     setTimeout(() => {
-      _this.loading = false
-    }, 2000)
+      _this.loading = false;
+    }, 2000);
   },
 
   methods: {
     toggleSidebar(to) {
-      this.isSidebarOpen = typeof to === 'boolean' ? to : !this.isSidebarOpen
-      this.$emit('toggle-sidebar', this.isSidebarOpen)
+      this.isSidebarOpen = typeof to === "boolean" ? to : !this.isSidebarOpen;
+      this.$emit("toggle-sidebar", this.isSidebarOpen);
     },
 
     // side swipe
     onTouchStart(e) {
       this.touchStart = {
         x: e.changedTouches[0].clientX,
-        y: e.changedTouches[0].clientY
-      }
+        y: e.changedTouches[0].clientY,
+      };
     },
 
     onTouchEnd(e) {
-      const dx = e.changedTouches[0].clientX - this.touchStart.x
-      const dy = e.changedTouches[0].clientY - this.touchStart.y
+      const dx = e.changedTouches[0].clientX - this.touchStart.x;
+      const dy = e.changedTouches[0].clientY - this.touchStart.y;
       if (Math.abs(dx) > Math.abs(dy) && Math.abs(dx) > 40) {
         if (dx > 0 && this.touchStart.x <= 80) {
-          this.toggleSidebar(true)
+          this.toggleSidebar(true);
         } else {
-          this.toggleSidebar(false)
+          this.toggleSidebar(false);
         }
       }
     },
 
     unLock() {
-      this.pageVisible = true
+      this.pageVisible = true;
     },
     haveLock() {
       if (this.$store.state.lock) {
         let haveLockPath = [
-          '/life/plan/2018.html',
-          '/life/plan/2019.html',
-          '/life/plan/2020.html',
-          '/life/diary/2019-03.html',
-          '/life/diary/2019-05.html',
-          '/life/diary/2019-09.html',
-          '/life/diary/2019-10.html',
-          '/life/diary/2019-11.html',
-          '/life/diary/2020-03.html',
-          '/life/diary/2020-04.html',
-          '/life/diary/2020-05.html'
-        ]
+          "/life/plan/2018.html",
+          "/life/plan/2019.html",
+          "/life/plan/2020.html",
+          "/life/diary/2019-03.html",
+          "/life/diary/2019-05.html",
+          "/life/diary/2019-09.html",
+          "/life/diary/2019-10.html",
+          "/life/diary/2019-11.html",
+          "/life/diary/2020-03.html",
+          "/life/diary/2020-04.html",
+          "/life/diary/2020-05.html",
+        ];
 
         if (haveLockPath.indexOf(this.$route.path) > -1) {
-          return true
+          return true;
         } else {
-          return false
+          return false;
         }
       } else {
-        return false
+        return false;
       }
-    }
-  }
-}
+    },
+  },
+};
 </script>
 <style lang="scss">
 .record-wrap {
