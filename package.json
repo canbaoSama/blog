@@ -20,6 +20,7 @@
   },
   "homepage": "https://github.com/canbaoSama/blog",
   "dependencies": {
+    "@webank/eslint-config-webank": "^1.2.3",
     "autoprefixer": "^9.6.4",
     "axios": "^0.27.2",
     "element-ui": "^2.13.0",

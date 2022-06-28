@@ -451,6 +451,7 @@ export default {
 					display: flex;
 					align-items: center;
 					justify-content: space-between;
+					line-height: 24px;
 
 					.article-date {
 						font-size: 14px;
