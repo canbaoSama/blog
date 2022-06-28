@@ -27,7 +27,7 @@
 		</Page>
 
 		<div class="record-wrap" v-if="pageVisible">
-			<a href="http://beian.miit.gov.cn/">还没有备案</a>
+			<a href="http://beian.miit.gov.cn/">备案号还在审核</a>
 		</div>
 	</div>
 </template>
@@ -49,7 +49,6 @@ export default {
 		return {
 			isSidebarOpen: false,
 			loading: true,
-
 			pageVisible: true,
 		};
 	},

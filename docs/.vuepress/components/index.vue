@@ -120,7 +120,7 @@
 						<span>Vuepress</span>
 					</a>
 					&
-					<a href="http://beian.miit.gov.cn/" style="font-size: 14px">还没有备案</a>
+					<a href="http://beian.miit.gov.cn/" style="font-size: 14px">备案号还在审核</a>
 				</div>
 			</div>
 		</footer>
@@ -652,7 +652,6 @@ export default {
 		}
 	}
 }
-
 @media screen and (orientation: portrait) and (max-width: 720px) {
 	.index-wrap {
 		.banner-wrap {
