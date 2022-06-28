@@ -5,9 +5,9 @@ pageClass: diary
 ## 书签
 
 ### 
-[「Github」ShnHz](https://github.com/ShnHz) <br>
-[「Github」SHN-UI](https://shnhz.github.io/shn-ui/#/component/installation) <br>
-[「Github」say-my-life](https://shnhz.github.io/say-my-life/) <br>
+[「Github」canbaoSama](https://github.com/canbaoSama) <br>
+[「Github」SHN-UI](https://canbaoSama.github.io/shn-ui/#/component/installation) <br>
+[「Github」say-my-life](https://canbaoSama.github.io/say-my-life/) <br>
 
 ### 技术文档
 [「Vue」Vue.js](https://cn.vuejs.org/v2/api/) <br>

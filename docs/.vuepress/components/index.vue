@@ -60,7 +60,7 @@
 						加入书签
 					</div>
 					<div class="social-info">
-						<a href="https://github.com/ShnHz">
+						<a href="https://github.com/canbaoSama">
 							<i class="shni shn-github-fill"></i>
 						</a>
 						<i @click="openAlipay" class="shni shn-alipay-circle-fill"></i>
@@ -342,7 +342,7 @@ export default {
 				position: "bottom-left",
 				dangerouslyUseHTMLString: true,
 				message:
-					'<img src="https://cdn.chenyingshuang.cn/index/alipay_ercode.jpg" style="width:200px"/>',
+					'<img src="https://s2.loli.net/2022/06/28/QyEhUkbB7oCJ5x9.jpg" style="width:200px"/>',
 				duration: 0,
 				customClass: "ercode-notify",
 			});
@@ -401,6 +401,7 @@ export default {
 			p {
 				margin-top: 8px;
 				font-size: 1.2rem;
+				color: #d7d7d7;
 			}
 		}
 
