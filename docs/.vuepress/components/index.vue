@@ -13,7 +13,7 @@
 			<main v-loading="loading">
 				<div>
 					<div :key="item.title + item.date + index" class="card-wrap" v-for="(item, index) in showList">
-						<router-link :to="item.url" class="article-title">{{item.title}}</router-link>
+						<router-link :to="item.url" class="article-title">{{ item.title }}</router-link>
 
 						<p class="article-summary" v-if="item.summary">
 							{{ item.summary }}
@@ -654,6 +654,7 @@ export default {
 		}
 	}
 }
+
 @media screen and (orientation: portrait) and (max-width: 720px) {
 	.index-wrap {
 		.banner-wrap {
