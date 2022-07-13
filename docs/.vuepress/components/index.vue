@@ -113,7 +113,7 @@
 				'background-image': `url(https://cdn.chenyingshuang.cn/index/bg${bannerBg}.jpg)`,
 			}" class="bg"></div>
 			<div class="footer-wrap">
-				<div class="copyright">©2019 - 2020 By Shn</div>
+				<div class="copyright">©2022 - 2222 By canbaoSama</div>
 				<div class="framework-info">
 					<span>Power by</span>
 					<a href="https://vuepress.vuejs.org/zh/" rel="noopener" target="_blank">

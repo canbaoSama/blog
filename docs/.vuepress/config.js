@@ -80,7 +80,10 @@ module.exports = {
                 {
                     title: 'CSS',
                     collapsable: true,
-                    children: ['/notes/css/Color']
+                    children: [
+                        '/notes/css/Color',
+                        '/notes/css/InputSize'
+                    ]
                 },
                 {
                     title: 'Vue',
