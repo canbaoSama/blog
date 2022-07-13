@@ -70,42 +70,23 @@ module.exports = {
         ],
         sidebar: {
             '/notes/': [
-                '/notes/Web',
-                '/notes/Chrome',
-                '/notes/VsCode',
                 {
                     title: 'JavaScript',
                     collapsable: true,
                     children: [
-                        '/notes/js/BinaryTree',
-                        '/notes/js/Distinct',
                         '/notes/js/Date',
-                        '/notes/js/FlattenDeep',
-                        '/notes/js/Object',
-                        '/notes/js/Promise',
-                        '/notes/js/Sort',
-                        '/notes/js/String'
                     ]
                 },
                 {
                     title: 'CSS',
                     collapsable: true,
-                    children: ['/notes/css/Class', '/notes/css/Color', '/notes/css/Shadow', '/notes/css/Scss']
+                    children: ['/notes/css/Color']
                 },
                 {
                     title: 'Vue',
                     collapsable: true,
                     children: [
                         '/notes/vue/Axios',
-                        '/notes/vue/Nprogress',
-                        '/notes/vue/Interval',
-                        '/notes/vue/Rem',
-                        '/notes/vue/Router',
-                        '/notes/vue/Sass',
-                        '/notes/vue/Title',
-                        '/notes/vue/GlobalComponents', //vue 全局组件
-                        '/notes/vue/VueLazyload',
-                        '/notes/vue/vueProgressiveImage'
                     ]
                 },
                 {
