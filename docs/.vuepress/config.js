@@ -104,6 +104,14 @@ module.exports = {
                         '/notes/animation/ShapesColor',
                         '/notes/animation/XRay'
                     ]
+                },
+                {
+                    title: 'echarts',
+                    collapsable: true,
+                    children: [
+                        '/notes/echarts/BaseInfo',
+                        '/notes/echarts/UseInVue3'
+                    ]
                 }
             ]
         },

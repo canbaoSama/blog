@@ -11,6 +11,7 @@ docs/life
 .env.local
 .env.*.local
 .history
+.temp
 
 # Log files
 npm-debug.log*
