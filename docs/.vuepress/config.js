@@ -73,24 +73,17 @@ module.exports = {
                 {
                     title: 'JavaScript',
                     collapsable: true,
-                    children: [
-                        '/notes/js/Date',
-                    ]
+                    children: ['/notes/js/Date', '/notes/js/Proxy']
                 },
                 {
                     title: 'CSS',
                     collapsable: true,
-                    children: [
-                        '/notes/css/Color',
-                        '/notes/css/InputSize'
-                    ]
+                    children: ['/notes/css/Color', '/notes/css/InputSize']
                 },
                 {
                     title: 'Vue',
                     collapsable: true,
-                    children: [
-                        '/notes/vue/Axios',
-                    ]
+                    children: ['/notes/vue/Axios']
                 },
                 {
                     title: '动画',
@@ -108,10 +101,7 @@ module.exports = {
                 {
                     title: 'echarts',
                     collapsable: true,
-                    children: [
-                        '/notes/echarts/BaseInfo',
-                        '/notes/echarts/UseInVue3'
-                    ]
+                    children: ['/notes/echarts/BaseInfo', '/notes/echarts/UseInVue3']
                 }
             ]
         },
