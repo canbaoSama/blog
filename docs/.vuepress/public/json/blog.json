@@ -29,6 +29,13 @@
 			"tag": [{ "name": "工具" }],
 			"url": "/blog/tool/toolOnline.html",
 			"date": "2020/06/19 15:41"
+		},
+		{
+			"title": "ES7 await 语法分析，await 的执行顺序",
+			"tag": [{ "name": "javascript" }],
+			"url": "/blog/js/await.html",
+			"date": "2020/07/26 20:00",
+			"top": true
 		}
 	]
 }
