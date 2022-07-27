@@ -11,7 +11,7 @@ pageClass: blog
 </p>
 
 ### 问题描述
-今天遇到一个问题，forEach 中 await 的执行顺序和预想的同步执行顺序不一致，后面查了资料才知道 await 同样有 **串行执行** 和 **并发执行**，所以打算分析一下 async/await 的语法
+今天遇到一个问题，forEach 中 await 的执行顺序和预想的同步执行顺序不一致，后面查了资料才知道 await 同样有 **串行执行** 和 **并发执行**，所以打算了解一下 async/await 的语法
 
 #### **基本用法**
 * async/await 可以使用同步代码的写法，实现异步的操作；
@@ -32,6 +32,9 @@ const test = async () => {
 }
 test();
 ```
+::: tip 运行结果
+![图片](https://s2.loli.net/2022/07/27/SyGDe8ETFPX1p3f.png)
+:::
 
 #### **抛出问题：如果使用 setTimeOut 模拟异步呢，执行顺序是啥**
 ``` js
@@ -47,6 +50,10 @@ const test = async () => {
 }
 test();
 ```
+::: tip 运行结果
+![图片](https://s2.loli.net/2022/07/27/Su8NiXaMAIpwyLc.png)
+:::
+
 这个时候，输出顺序就和前面的 promise 不一致了<br/>
 那么问题来了，为什么会导致这样的结果呢，不是说好 async/await 能够实现同步写法吗？
 
@@ -93,6 +100,9 @@ async function test() {
     }
 }
 ```
+::: tip 运行结果
+![图片](https://s2.loli.net/2022/07/27/PfClRMbEyDwu6Fs.png)
+:::
 
 * 内部的 await 是独立的异步操作（即互不依赖），既 **并发执行**
 ``` js
@@ -134,6 +144,9 @@ async function test() {
     let bar = await test2Pro;
 }
 ```
+::: tip 运行结果
+![图片](https://s2.loli.net/2022/07/27/PUIku4qRyV2BlC8.png)
+:::
 
 #### **如果多个 await, 前面的 await 报错呢**
 由于 await 命令后面的 Promise 对象，运行结果可能是rejected, 所以如果某个 await 出错，就会导致后续的所有代码都不能执行，所以这个时候我们需要将 await 用 try/catch 包裹起来，包裹后，try/catch 后面的代码就能够正常运行<br>
@@ -167,5 +180,9 @@ async function test() {
   console.log("这里是后续代码");
 }
 ```
+::: tip 运行结果
+![图片](https://s2.loli.net/2022/07/27/R5VYtGSk7XiU96z.png)
+:::
+
 <base-valine />
 <el-backtop :visibility-height="0"></el-backtop>
