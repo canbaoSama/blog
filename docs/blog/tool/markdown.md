@@ -4,7 +4,7 @@ pageClass: blog
 
 ## MARKDOWN 语法大全整理（原生）
 <p class="date">2020/06/20 15:41:20 
-<span id="/blog/js/markdown.html" class="leancloud_visitors">
+<span id="/blog/tool/markdown.html" class="leancloud_visitors">
     <i class="shni shn-eye-fill" />
     <i class="leancloud-visitors-count"></i>
 </span>
