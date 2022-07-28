@@ -1,48 +1,47 @@
 {
-	"tag": [
-		{ "name": "vue", "type": "vue" },
-		{ "name": "css", "type": "css" },
-		{ "name": "javascript", "type": "" },
-		{ "name": "小程序", "type": "applets" },
-		{ "name": "vuepress", "type": "vuepress" },
-		{ "name": "转", "type": "info" },
-		{
-			"name": "music",
-			"type": "music",
-			"icon": "say-my-life-i say-my-life-i-musicnote"
-		},
-		{ "name": "奇闻异事", "type": "anecdote" },
-		{ "name": "movie", "type": "movie", "icon": "shni shn-video-fill" },
-		{ "name": "git", "type": "git" },
-		{ "name": "工具", "type": "git" }
-	],
-	"blog": [
-		{
-			"title": "上传视频生成视频封面图展示",
-			"tag": [{ "name": "javascript" }],
-			"url": "/blog/js/videoImg.html",
-			"date": "2020/06/21 15:00",
-			"top": true
-		},
-		{
-			"title": "在线工具推荐",
-			"tag": [{ "name": "工具" }],
-			"url": "/blog/tool/toolOnline.html",
-			"date": "2020/06/19 15:41"
-		},
-		{
-			"title": "ES7 await 语法分析，await 的执行顺序",
-			"tag": [{ "name": "javascript" }],
-			"url": "/blog/js/await.html",
-			"date": "2020/07/26 20:00",
-			"top": true
-		},
-		{
-			"title": "MARKDOWN 语法大全整理",
-			"tag": [{ "name": "tool" }],
-			"url": "/blog/tool/markdown.html",
-			"date": "2020/07/28 20:00",
-			"top": true
-		}
-	]
+    "tag": [
+        { "name": "vue", "type": "vue" },
+        { "name": "css", "type": "css" },
+        { "name": "javascript", "type": "" },
+        { "name": "小程序", "type": "applets" },
+        { "name": "vuepress", "type": "vuepress" },
+        { "name": "转", "type": "info" },
+        {
+            "name": "music",
+            "type": "music",
+            "icon": "say-my-life-i say-my-life-i-musicnote"
+        },
+        { "name": "奇闻异事", "type": "anecdote" },
+        { "name": "movie", "type": "movie", "icon": "shni shn-video-fill" },
+        { "name": "git", "type": "git" },
+        { "name": "工具", "type": "git" }
+    ],
+    "blog": [
+        {
+            "title": "上传视频生成视频封面图展示",
+            "tag": [{ "name": "javascript" }],
+            "url": "/blog/js/videoImg.html",
+            "date": "2020/06/21 15:00",
+            "top": true
+        },
+        {
+            "title": "在线工具推荐",
+            "tag": [{ "name": "工具" }],
+            "url": "/blog/tool/toolOnline.html",
+            "date": "2020/06/19 15:41"
+        },
+        {
+            "title": "ES7 await 语法分析，await 的执行顺序",
+            "tag": [{ "name": "javascript" }],
+            "url": "/blog/js/await.html",
+            "date": "2020/07/26 20:00"
+        },
+        {
+            "title": "MARKDOWN 语法大全整理",
+            "tag": [{ "name": "tool" }],
+            "url": "/blog/tool/markdown.html",
+            "date": "2020/07/28 20:00",
+            "top": true
+        }
+    ]
 }
