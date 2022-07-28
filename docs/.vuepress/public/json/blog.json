@@ -36,6 +36,13 @@
 			"url": "/blog/js/await.html",
 			"date": "2020/07/26 20:00",
 			"top": true
+		},
+		{
+			"title": "MARKDOWN 语法大全整理",
+			"tag": [{ "name": "tool" }],
+			"url": "/blog/tool/markdown.html",
+			"date": "2020/07/28 20:00",
+			"top": true
 		}
 	]
 }
