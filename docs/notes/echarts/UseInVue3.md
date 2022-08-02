@@ -1,8 +1,8 @@
 ## 在 Vue3 中使用 echarts
 
-::: tip
+::: tip 地址
 
-[`vue`](https://v3.cn.vuejs.org/): 3.2.6 版本<br />
+[`vue`](https://v3.cn.vuejs.org/): <code class="default">3.2.6</code> 版本<br />
 [`echarts`](https://www.npmjs.com/package/echarts): 5.3.3 版本<br />
 [`echarts-liquidfill`](https://github.com/ecomfe/echarts-liquidfill): 3.1.0 版本（水球图，个人觉得非常不错）
 :::
